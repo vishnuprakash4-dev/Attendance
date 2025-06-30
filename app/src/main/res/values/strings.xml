@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SPlus HRMS</string>
+    <string name="nttv_attendance">NTTV Attendance</string>
+    <string name="emp_position">Emp Position</string>
+    <string name="date_amp_time"><![CDATA[Date & Time]]></string>
+    <string name="emp_id">Emp Id</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="checkin_area">CheckIn Area</string>
+    <string name="check_in">Check In</string>
+    <string name="biometric_in_attendance">Biometric In Attendance</string>
+    <string name="attendance_history">Attendance History</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string name="s_plus_media_pvt_ltd">S Plus Media Pvt Ltd</string>
+    <string name="api_url">https://payroll.newstamil.tv/api/</string>
+
+    <string-array name="applyingfor">
+        <item>Permission</item>
+        <item>OD</item>
+        <item>Half Day</item>
+        <item>Full Day</item>
+        <item>Multiple Days</item>
+    </string-array>
+
+    <string-array name="leavetype">
+        <item>Casual Leave</item>
+        <item>Sick Leave</item>
+        <item>Earned Leave</item>
+        <item>Comp Off</item>
+    </string-array>
+
+</resources>

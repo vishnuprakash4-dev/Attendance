@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    tools:context=".Apply_LeaveActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/leave_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#636363"/>
+
+            <ToggleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:textOff="Check Leave Balance"
+                android:textOn="Check Leave Balance"
+                android:background="@color/white"
+                android:textColor="#003567"
+                android:gravity="center_vertical"
+                android:id="@+id/leave_balance"
+                android:drawableStart="@drawable/selector">
+
+            </ToggleButton>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/available_leave"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Casual Leave"
+                        android:layout_gravity="start"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        android:id="@+id/cl_leave"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sick Leave"
+                        android:layout_gravity="start"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        android:id="@+id/sl_leave"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Earned Leave"
+                        android:layout_gravity="start"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        android:id="@+id/el_leave"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comp Off"
+                        android:layout_gravity="start"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        android:id="@+id/comp_off"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#636363"/>
+
+
+            <ToggleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:textOff="Apply Leave"
+                android:textOn="Apply Leave"
+                android:background="@color/white"
+                android:textColor="#003567"
+                android:gravity="center_vertical"
+                android:id="@+id/leave_apply"
+                android:drawableStart="@drawable/selector">
+
+            </ToggleButton>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/leave_application"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:text="Leave Application"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="@dimen/_15sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="center"
+                        android:id="@+id/reporting_person"
+                        android:layout_marginTop="8dp"
+                        android:text="Reporting to:"
+                        android:textStyle="bold"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="Applying For :"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:id="@+id/hideKeyboard"
+                                android:textColorHint="@color/fontColor"
+                                app:boxStrokeColor="@color/buttonBackground"
+                                app:hintTextColor="@color/buttonBackground"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Applying For">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/applying_for"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="textMultiLine"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/leave_type_wrapper"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="Leave Type :"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:textColorHint="@color/fontColor"
+                                app:boxStrokeColor="@color/buttonBackground"
+                                app:hintTextColor="@color/buttonBackground"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Leave Type">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/leave_type"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="textMultiLine"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/permission_from_wrapper"
+                            android:visibility="gone"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="Permission From :"
+                                android:gravity="center"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Permission From">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/permission_from"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="time"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/permission_from_to"
+                            android:visibility="gone"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="Permission To :"
+                                android:gravity="center"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Permission To">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/permission_to"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="time"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:id="@+id/day_sector_wrapper"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="Select Type :"
+                                android:gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Day Sector">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/day_sector"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="textMultiLine"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/date_from_wrapper"
+                            android:visibility="gone"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="From Date :"
+                                android:gravity="center"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Date From">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/date_from"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="time"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/date_to_wrapper"
+                            android:visibility="gone"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:text="To Date :"
+                                android:gravity="center"
+                                android:textColor="@color/secondary_text"
+                                android:textStyle="bold"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                app:hintTextAppearance="@style/EditTextCrane"
+                                android:hint="Date To">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/date_to"
+                                    android:focusableInTouchMode="false"
+                                    android:clickable="true"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/ibmplex"
+                                    android:inputType="time"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:textColorHint="@color/fontColor"
+                            app:boxStrokeColor="@color/buttonBackground"
+                            app:hintTextColor="@color/buttonBackground"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:theme="@style/EditTextCrane"
+                            android:hint="Reason">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:id="@+id/reason"
+                                android:textCursorDrawable="@color/buttonBackground"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ibmplex"
+                                android:inputType="textMultiLine"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Send"
+                            android:id="@+id/submit"
+                            android:fontFamily="@font/ibmplex"
+                            android:textSize="15sp"
+                            android:background="@drawable/submit_button"
+                            android:padding="12dp"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginBottom="24dp" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#636363"/>
+
+            <ToggleButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="8dp"
+                android:textOff="Leave History"
+                android:textOn="Leave History"
+                android:background="@color/white"
+                android:textColor="#003567"
+                android:gravity="center_vertical"
+                android:id="@+id/leave_history_"
+                android:drawableStart="@drawable/selector">
+
+            </ToggleButton>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light200" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#636363"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

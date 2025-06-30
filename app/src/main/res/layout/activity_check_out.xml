@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:orientation="vertical"
+    tools:context=".CheckOutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <include
+        layout="@layout/main_toolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:padding="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:id="@+id/user_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="135dp"
+                android:gravity="center"
+                android:hint="@string/employee_name"
+                android:textColorHint="@color/secondary_text"
+                android:id="@+id/emp_name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="180dp"
+                android:gravity="center"
+                android:textColorHint="@color/secondary_text"
+                android:hint="@string/emp_id"
+                android:id="@+id/emp_id"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="225dp"
+                android:textColorHint="@color/secondary_text"
+                android:hint="@string/emp_position"
+                android:gravity="center"
+                android:id="@+id/emp_position"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="270dp"
+                android:hint="Checked In Time"
+                android:textColorHint="@color/secondary_text"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/checked_in_time"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/starea"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginStart="75dp"
+                android:hint="CheckOut Area"
+                android:visibility="gone"
+                android:textColorHint="@color/black"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="10sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="75dp" />
+
+            <TextView
+                android:id="@+id/stlat"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginStart="75dp"
+                android:hint="CheckOut Area"
+                android:visibility="gone"
+                android:textColorHint="@color/black"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="10sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="75dp" />
+
+
+            <Button
+                android:id="@+id/check_out"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/submit_button"
+                android:layout_marginStart="75dp"
+                android:text="Check Out"
+                android:textStyle="bold"
+                android:layout_marginLeft="75dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/main_nav_drawer"/>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "87735400836",
+    "project_id": "splus-hrms",
+    "storage_bucket": "splus-hrms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87735400836:android:ebde06f7482a04ffa7c5d1",
+        "android_client_info": {
+          "package_name": "com.example.attendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "87735400836-2ujv6q5hi20nb2lbft6mpt5ptm80f9ad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0_dYjQC1s9QN4fMBv4zCHO9Mwu6ba7kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "87735400836-2ujv6q5hi20nb2lbft6mpt5ptm80f9ad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

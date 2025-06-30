@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Home_PageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@drawable/header_shows"
+        tools:ignore="MissingConstraints">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:id="@+id/user_image"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:layout_width="@dimen/_210sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="Welcome"
+            android:gravity="center"
+            android:layout_marginStart="135dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginLeft="135dp" />
+
+        <TextView
+            android:id="@+id/emp_name"
+            android:layout_width="@dimen/_210sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:hint="Emp Name"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_marginStart="135dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginLeft="135dp" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:hint="Date &amp; Time"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/dateandtime"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp" />
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:background="@color/white"
+        android:rowCount="3"
+        android:columnCount="2">
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:id="@+id/attendance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/checkingin"
+                    android:id="@+id/Attendance"/>
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Attendance Punch"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:id="@+id/apply_leave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/leave"
+                    android:id="@+id/applyleave"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apply Leave"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:id="@+id/attendance_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/attendance_history"
+                    android:id="@+id/Attendance_history"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Attendance History"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:id="@+id/leave_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/leave_history"
+                    android:id="@+id/leavehistory"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leave History"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:id="@+id/pay_slip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/payslip"
+                    android:id="@+id/payslip"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Slip"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="130dp"
+            android:layout_width="130dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="20dp">
+
+            <LinearLayout
+                android:id="@+id/log_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logout"
+                    android:id="@+id/logout"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log Out"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</RelativeLayout>
